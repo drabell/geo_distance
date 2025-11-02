@@ -1,9 +1,9 @@
 ﻿/*****************************************************************************************
-Module           :  GeoDistance.cs |Class Lib
+Module           :  GeoDistance.cs | Class Lib
 Description      :  Methods to calculate the distance between two geo-points on surface
 *****************************************************************************************
 Author           :  Alexander Bell
-Copyright        :  2011-2016 Infosoft International Inc
+Copyright        :  2011-2025 Alexander Bell
 *****************************************************************************************
 DISCLAIMER       :  This Module is provided on AS IS basis without any warranty
 TERMS OF USE     :  This module is copyrighted. Please keep the Copyright notice intact.
@@ -32,7 +32,7 @@ namespace GIS
 
         #region Method 1: Haversine algo
         /// <summary>
-        /// Distance between two geographic points on surface, km/miles
+        /// Distance between two geographic points on the Earth's surface (km/miles)
         /// Haversine formula to calculate
         /// great-circle (orthodromic) distance on Earth
         /// High Accuracy, Medium speed
@@ -77,7 +77,7 @@ namespace GIS
 
         #region Method 2: Spherical Law of Cosines
         /// <summary>
-        /// Distance between two geographic points on surface, km/miles
+        /// Distance between two geographic points on the Earth's surface (km/miles)
         /// Spherical Law of Cosines formula to calculate
         /// great-circle (orthodromic) distance on Earth;
         /// High Accuracy, Medium speed
@@ -115,14 +115,16 @@ namespace GIS
 
         #region Method 3: Spherical Earth projection
         /// <summary>
-        /// Distance between two geographic points on surface, km/miles
+        /// Distance between two geographic points on the Earth's surface (km/miles)
         /// Spherical Earth projection to a plane formula (using Pythagorean Theorem)
         /// to calculate great-circle (orthodromic) distance on Earth.
         /// central angle =
         /// Sqrt((_radLat2 - _radLat1)^2 + (Cos((_radLat1 + _radLat2)/2) * (Lon2 - Lon1))^2)
-        /// Medium Accuracy, Fast,
-        /// relative error less than 0.1% in search area smaller than 250 miles
+        /// Medium Accuracy, Fast
         /// math theory re: http://en.wikipedia.org/wiki/Geographical_distance
+        /// Note: relative error is less than 0.1% in search area smaller than 250 miles;
+        /// shown mostlty for a didactic purpose - not recommended for practical use that
+        /// that requires high accuracy.    
         /// </summary>
         /// <param name="Lat1">double: 1st point Latitude</param>
         /// <param name="Lon1">double: 1st point Longitude</param>
@@ -155,4 +157,5 @@ namespace GIS
         }
         #endregion
     }
+
 }
