@@ -1,4 +1,4 @@
-## Orthodromic Geo-Distance
+## Orthodromic Geo-Distance (.NET/C#)
 ## 3 methods to calculate the great-circle (orthodromic) distance between two geographic points on the Earth's surface (km/miles) implemented in C# programming language:
 ### Method 1: Haversine algorithm 
 Calculate great-circle (orthodromic) distance on the Earth's surface (km/miles) with High Accuracy
