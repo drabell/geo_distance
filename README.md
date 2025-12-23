@@ -1,6 +1,6 @@
 ## Geo-Distance | Class Lib |.NET/C#
 #### Contains 4 static Methods to calculate the great circle (orthodromic) distance (km/mi) between two geo-points on Earth specified by their coordinates in decimal format (Latitude, Longitude), e.g.
-* John F. Kennedy International Airport (JFK): {40.641766,-73.780968}
+* John F. Kennedy International Airport, USA (JFK): {40.641766,-73.780968}
 * London Heathrow Airport, UK (LHR): {51.470020 -0.454295}
 
 | Method                      | Distance, km    | Distance, mi    | Note
